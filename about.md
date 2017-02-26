@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Ab
+title: About
 ---
 
 <p class="message">
