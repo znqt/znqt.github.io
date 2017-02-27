@@ -9,7 +9,7 @@ title:               Z
 tagline:             'NQT'
 description:         '.'
 url:                znqt.github.io
-baseurl:             'znqt.github.io'
+baseurl:             ''
 paginate:            2
 
 # About/contact
