@@ -8,7 +8,7 @@ permalink:           /:title/
 title:               Z
 tagline:             'NQT'
 description:         '.'
-url:                 znqt.github.io
+url:                'znqt.github.io'
 baseurl:             '/'
 paginate:            5
 
