@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WhiteHat Challenge 01 Pwn
+title: "[WhiteHat Challenge 01] - Pwn"
 ---
 
 
