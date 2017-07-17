@@ -30,20 +30,20 @@ print hack
 
 Following the code we can know that length of flag = 14 and `hack` has format like :
 
-$hack = ...((ord(flag[0]).pad+pad).ord(flag[1]))+pad).ord(flag[2]))....)+pad).ord(flag[13])$
+`hack = ...((ord(flag[0]).pad+pad).ord(flag[1]))+pad).ord(flag[2]))....)+pad).ord(flag[13])`
 
 flag is ASCII strings and printable so :  $32 <= ord(flag[i]) <= 127$
 
 ### Solution: 
 
-1. We will find last char of flag ( using mod ). Then $hack/ord(flag[13]) = pad.[((ord(flag[0])+1).ord(flag[1]+1)...)]$
-2. Length of `pad` will be $>=32$ but after run this script i guess length of `pad` is 39. 
-3. Factor the $hack/ord(flag[13])$ then finding all combination of it to find `pad`.
+1. We will find last char of flag ( using mod ). Then `hack/ord(flag[13]) = pad.[((ord(flag[0])+1).ord(flag[1]+1)...)]`
+2. Length of `pad` will be `>=32` but after run this script i guess length of `pad` is 39. 
+3. Factor the `hack/ord(flag[13])` then finding all combination of it to find `pad`.
 4. After finding `pad`, I use recursion algorithm to find all possible flag.
 
 ### Code : 
 
-I find last char first (just using mod) and $flag[13]={"i","k","K","?"}$
+I find last char first (just using mod) and `flag[13]={"i","k","K","?"}`
 
 (some chars were removed because have no case have it at last (eg : `#`))
 
