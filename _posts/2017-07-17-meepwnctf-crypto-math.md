@@ -2,7 +2,8 @@
 layout: post
 title: "[MeePwnCTF][Crypto] MATH"
 ---
-|\/|/-\T|-|
+`| \ / | / -\ T | - |`
+
 It's quite a ez chall but don't know why some guys stuck with it :/
 
 > I hack your brain!
