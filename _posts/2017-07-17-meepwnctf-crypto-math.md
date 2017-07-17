@@ -57,9 +57,7 @@ hack=64364485357060434848865708402537097493512746702748009007197338675
 
 def re(x,d):
 	if x<=32:
-		return 0
-	if x==0:
-		return 1
+		return
 	temp=d
 	for i in xrange(48,128):
 		if x%i==0:
