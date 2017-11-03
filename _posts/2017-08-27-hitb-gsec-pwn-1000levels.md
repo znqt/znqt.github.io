@@ -38,7 +38,7 @@ for ( i = read(0, &buf, 1024uLL); i & 7; ++i )
 
 With this vuln, you can ret to anywhere. But `PIE` enabled, so you can't ret to any addr in program to leak stack or libc.
 
-Studdenly, i remember a trick to bypass this `PIE`. Using `vsyscall`. The addr of `vsyscall` static in kernel. It just has some gadget to ret to the next addr in stack. If the next addr is in libc , You can overwrite some byte to return to addr you want in libc. But the line `*(&buf + i) = 0;` prevent you to do it.
+Suddenly, i remember a trick to bypass this `PIE`. Using `vsyscall`. The addr of `vsyscall` static in kernel. It just has some gadget to ret to the next addr in stack. If the next addr is in libc , You can overwrite some byte to return to addr you want in libc. But the line `*(&buf + i) = 0;` prevent you to do it.
 
 I was stuck at this for a long time ... 
 
