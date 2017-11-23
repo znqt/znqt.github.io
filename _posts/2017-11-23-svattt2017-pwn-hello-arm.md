@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[SVATTT2017] [Pwn] hello arm"
+title: "[SVATTT2017 Final Round] [Daemon] [Pwn] hello_arm"
 ---
 
 Sau khi thọt ở vòng sơ khảo với bài formatstring. Mình đã phục thù với bài daemon **noteservice** . Nhưng lại ngã với bài **hello_arm.**... .
