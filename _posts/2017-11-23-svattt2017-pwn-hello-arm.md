@@ -5,11 +5,11 @@ title: "[SVATTT2017] [Pwn] hello arm"
 
 Sau khi thọt ở vòng sơ khảo với bài formatstring. Mình đã phục thù với bài daemon **noteservice** . Nhưng lại ngã với bài **hello_arm.**... .
 
-Trong buổi thi thì BTC có cho file img arm để tạo env debug. Xui làm sao hôm đó load file đó lại không ra mạng được, không setup được gdb. Mình down src gdb về build nhưng đến cuối lại bị failed. Vì không setup được env nên không debug được... 
+Trong buổi thi thì BTC có cho file img arm để tạo env debug. Xui làm sao hôm đó load file đó lại không ra mạng được, không setup được gdb. Mình down src gdb về build nhưng đến cuối lại bị failed. Thế là hôm đó quỳ với bài này... 
 
 Về nhà mình đã tự build img arm và setup peda-arm để debug.
 
-Link các challenges đã được VNSEC public : https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3hmA1FHf-a2uymoaXk8Cu8yvji_0mYI2EnPbmSzRHoiWMwPuLXj_OpaLcqEtYHYepcI3GG3rEIpEM/pubhtml?gid=0&single=true
+Link các challenges đã được VNSEC public : `https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3hmA1FHf-a2uymoaXk8Cu8yvji_0mYI2EnPbmSzRHoiWMwPuLXj_OpaLcqEtYHYepcI3GG3rEIpEM/pubhtml?gid=0&single=true`
 
 
 
@@ -57,7 +57,7 @@ nhưng không control được R0.
 
 Đến đây thì mình đã stuck. Nhưng chợt nhớ đến hint của BTC là **thumb2-mode** .
 
-Sau khi tìm hiểu (http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ddi0344c/Beiiegaf.html ) thì được biết rằng architecture **arm** có 3 loại instruction sets là : ARM thumb và thumb2. ARM dùng instruction 32-bit, thumb dùng instruction 16-bit và thumb2 32 bit mixing giữa 2 loại này (hỗ trợ thumb trên 32-bit và ARM). 
+Sau khi tìm hiểu (`http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ddi0344c/Beiiegaf.html` ) thì được biết rằng architecture **arm** có 3 loại instruction sets là : ARM thumb và thumb2. ARM dùng instruction 32-bit, thumb dùng instruction 16-bit và thumb2 32 bit mixing giữa 2 loại này (hỗ trợ thumb trên 32-bit và ARM). 
 
 Vì mặc định của của ROPgadget sẽ không hiện các instruction thumb nên cần phải thêm options `--thumb`
 
