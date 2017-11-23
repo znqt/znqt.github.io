@@ -57,7 +57,7 @@ nhưng không control được R0.
 
 Đến đây thì mình đã stuck. Nhưng chợt nhớ đến hint của BTC là **thumb2-mode** .
 
-Sau khi tìm hiểu (`http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ddi0344c/Beiiegaf.html` ) thì được biết rằng architecture **arm** có 3 loại instruction sets là : ARM thumb và thumb2. ARM dùng instruction 32-bit, thumb dùng instruction 16-bit và thumb2 32 bit mixing giữa 2 loại này (hỗ trợ thumb trên 32-bit và ARM). 
+Sau khi tìm hiểu (`http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ddi0344c/Beiiegaf.html` ) thì được biết rằng architecture **arm** có 3 loại instruction sets là : ARM, thumb và thumb2. ARM dùng instruction 32-bit, thumb dùng instruction 16-bit và thumb2 32 bit mixing giữa 2 loại này (hỗ trợ thumb trên 32-bit và ARM). 
 
 Vì mặc định của của ROPgadget sẽ không hiện các instruction thumb nên cần phải thêm options `--thumb`
 
