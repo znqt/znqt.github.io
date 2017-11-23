@@ -9,6 +9,10 @@ Trong buổi thi thì BTC có cho file img arm để tạo env debug. Xui làm s
 
 Về nhà mình đã tự build img arm và setup peda-arm để debug.
 
+Tham khảo bài này để build img arm (cũng của tác giả ra đề bài này :)) ) : `https://tradahacking.vn/debug-linux-kernel-v%E1%BB%9Bi-qemu-v%C3%A0-gdb-38c2cd29f616` có mấy đoạn trong đây không đúng lắm (trong TH mình) thắc mắc gì có thể hỏi mình.
+
+peda-arm : `https://github.com/alset0326/peda-arm`
+
 Link các challenges đã được VNSEC public : `https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3hmA1FHf-a2uymoaXk8Cu8yvji_0mYI2EnPbmSzRHoiWMwPuLXj_OpaLcqEtYHYepcI3GG3rEIpEM/pubhtml?gid=0&single=true`
 
 
