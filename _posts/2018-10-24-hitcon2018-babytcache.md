@@ -67,9 +67,9 @@ Because the heap #1 is the current high end of memory so it consolidates into to
 
 ### Leak libc
 
-This step is hard if you dont know about FILE structure. Because the author of this challenge is Angelboy :D, so i guess we should use his research in it. 
+This step is hard if you dont know about FILE structure. Because the author of this challenge is Angelboy :D, so i guess we should use his research about it. 
 
-The slide File Structures: Another Binary Exploitation Technique https://www.slideshare.net/AngelBoy1/play-with-file-structure-yet-another-binary-exploit-technique and his talk in HITBGSEC 2018 https://www.youtube.com/watch?v=Fr3VU5hdL4s. Then i found the **arbitrary memory reading** by abusing the FILE structure 
+The slide File Structures: Another Binary Exploitation Technique `https://www.slideshare.net/AngelBoy1/play-with-file-structure-yet-another-binary-exploit-technique` and his talk in HITBGSEC 2018 `https://www.youtube.com/watch?v=Fr3VU5hdL4s`. Then i found the **arbitrary memory reading** by abusing the FILE structure 
 
 ```python
     #1. free all heaps to push it to tcache. Then we use technique Tcache poisoning to return to any address we want.
@@ -99,15 +99,15 @@ The slide File Structures: Another Binary Exploitation Technique https://www.sli
     #after that, puts function will print the libc address.
 ```
 
-1. 
+--1. 
 
 ![](https://i.imgur.com/s7ZQtbW.png)
 
-3. 
+--3. 
 
 ![](https://i.imgur.com/src7Rwq.png)
 
-4. print libc address
+--4. print libc address
 
 ![](https://i.imgur.com/XhRCybo.png)
 
@@ -129,7 +129,7 @@ The last step is ez. Using Tcache poisoning to write __free_hook address to FD p
 	delheap(0)
 ```
 
-https://github.com/znqt/writeup/blob/master/2018/hitcon/babytcache/bt.py
+[exploit script](https://github.com/znqt/writeup/blob/master/2018/hitcon/babytcache/bt.py)
 
 ![](https://i.imgur.com/ygkNMER.png)
 
@@ -143,7 +143,7 @@ The vuln is off-by-null because using function strcpy in New heap.
 
 ![](https://i.imgur.com/6MMczbG.png)
 
-https://github.com/znqt/writeup/blob/master/2018/hitcon/childrentcache/ct.py
+[exploit script](https://github.com/znqt/writeup/blob/master/2018/hitcon/childrentcache/ct.py)
 
 Thanks HITCON team and Angelboy for insteresting challenges.
 
