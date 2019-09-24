@@ -4,6 +4,6 @@ title: About
 ---
 
 <p class="message">
-  I'm Z
+  ThaiNQ from E-CQ
 </p>
 
